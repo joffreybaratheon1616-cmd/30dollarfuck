@@ -1,0 +1,84 @@
+# ==============================================================================
+# AccStore Session Manager — Git Ignore Rules
+# ==============================================================================
+
+# ─────────────────────────────────────────────────────────────────
+# 1. Environment & Secrets (NEVER COMMIT)
+# ─────────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+proxies.txt
+temp_mail_vault.json
+target_mail_claimed.json
+received_otp.txt
+collected_maxxspace_mails.jsonl
+
+# ─────────────────────────────────────────────────────────────────
+# 2. Session Databases & User Data
+# ─────────────────────────────────────────────────────────────────
+accstore_data/
+sessions/
+downloads/
+uploads/
+*.session
+*.session-journal
+*.zip
+*.tar.gz
+*.7z
+*.rar
+
+# ─────────────────────────────────────────────────────────────────
+# 3. Python Cache & Virtual Environments
+# ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ─────────────────────────────────────────────────────────────────
+# 4. Logs, Runtime & Debugging
+# ─────────────────────────────────────────────────────────────────
+*.log
+mail_snatcher.log
+nohup.out
+
+# ─────────────────────────────────────────────────────────────────
+# 5. IDE & OS Metadata
+# ─────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
